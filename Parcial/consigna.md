@@ -25,6 +25,6 @@ E: 20870,30, 2 clientes
 2. Construir una función auxiliar que reciba -al menos- categoría e importe y devuelva a la función del punto 1, el total acumulado por cada categoría con su cantidad de clientes.
 
 3. Mensaje final en main(), que emita los resultados finales:
-- total general de clientes.
-- qué categoría facturó más y cuál fue el importe.
-- el total general de facturación.
+    - total general de clientes.
+    - qué categoría facturó más y cuál fue el importe.
+    - el total general de facturación.
