@@ -10,11 +10,11 @@ Requerimientos:
 Clase (G, P ó E) -caracter-
 Importe, -número real-
 Esta función debe emitir, durante el proceso de obtención de los resultados parciales y por cada punto de venta la facturación total por categoría con su cantidad de clientes.
-Ejemplo de la primera iteración de grupo:
-Punto de venta 1 – Facturación:
-G: 72566,89, 5 clientes
-P: 81214,69, 2 clientes
-E: 101987,50, 3 clientes
+Ejemplo de la primera iteración de grupo: -
+Punto de venta 1 – Facturación: -
+G: 72566,89, 5 clientes -
+P: 81214,69, 2 clientes -
+E: 101987,50, 3 clientes -
 Ejemplo de la segunda iteración de grupo:
 Punto de venta 2 – Facturación:
 G: 102245,21, 3 clientes
