@@ -1,4 +1,4 @@
-** Datos:
+**Datos:
 Una empresa de ventas de artículos electrónicos y electrodomésticos, necesita una aplicación específica para la facturación generada por puntos de ventas minoristas a sus clientes y para saber qué categoría es la más vendida. La empresa, tiene como criterio, categorizar los productos como:
 categoría ‘G’: Grandes electrodomésticos
 categoría ‘P’: Pequeños electrodomésticos
