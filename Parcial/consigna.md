@@ -1,8 +1,8 @@
 **Datos:**
-Una empresa de ventas de artículos electrónicos y electrodomésticos, necesita una aplicación específica para la facturación generada por puntos de ventas minoristas a sus clientes y para saber qué categoría es la más vendida. La empresa, tiene como criterio, categorizar los productos como:
-categoría ‘G’: Grandes electrodomésticos
-categoría ‘P’: Pequeños electrodomésticos
-categoría ‘E’: Equipos de informática y telecomunicaciones
+Una empresa de ventas de artículos electrónicos y electrodomésticos, necesita una aplicación específica para la facturación generada por puntos de ventas minoristas a sus clientes y para saber qué categoría es la más vendida. La empresa, tiene como criterio, categorizar los productos como:  
+categoría ‘G’: Grandes electrodomésticos  
+categoría ‘P’: Pequeños electrodomésticos  
+categoría ‘E’: Equipos de informática y telecomunicaciones  
 Para resolver el problema de la facturación informatizando el sistema, lo seleccionan a Ud., y se reúnen para el análisis funcional. El escenario global es que tienen 8 puntos de venta, cada uno tiene muchos clientes –desconocen la cantidad- y, que estos clientes compran algún producto de los mencionados en las categorías, cuyos costos varían. Por lo tanto en la reunión definen lo siguiente:
 
 Requerimientos:
