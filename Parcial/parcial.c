@@ -46,6 +46,10 @@ int funcion1(char *cMax, float *iMax, float *tFact){
             fflush(stdin);
 
             if(numCli > 0){       
+                printf("Ingresar la letra de la clase correspondiente: \n");
+                printf("G: Grandes electrodom%csticos\n", 130);
+                printf("P: Peque%cos electrodom%csticos\n", 164, 130);
+                printf("E: Equipos de inform%ctica y telecomunicaciones\n", 160);
                 printf("Clase: ");
                 scanf("%c", &clase);
                 fflush(stdin);
