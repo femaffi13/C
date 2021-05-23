@@ -16,20 +16,22 @@ m. Invertir los elementos del vector sin utilizar otro vector. Por ejemplo, el v
 #include <stdio.h>
 
 void CargaVector(int vec[], int m);
-void SumaVector(int vec[], int m, int *sumatoria);
+void SumaVector(int vec[], int m);
+void MinVector(int vec[], int m);
+void PromVector(int vec[], int m);
 
 int main(){
-    int m;
-    int sumatoria = 0;
-
+    int m;  
     printf("Cantidad de elementos del vector: ");
     scanf("%d", &m);
     fflush(stdin);
 
     int vector[m];
 
-    CargaVector(vector, m);
-    SumaVector(vector, m, &sumatoria);   
+    CargaVector(vector, m);     //a.
+    SumaVector(vector, m);      //b.
+    MinVector(vector, m);       //c.
+    PromVector(vector, m);      //d.
 
     return 0;
 }
@@ -45,9 +47,28 @@ void CargaVector(int vec[], int m){
     }
 }
 
-void SumaVector(int vec[], int m, int *sumatoria){
+void SumaVector(int vec[], int m){
+    int sumatoria = 0;
     for(int i=0; i<m; i++){
-        *sumatoria += vec[i];
+        sumatoria += vec[i];
     }
-    printf("\nLa sumatoria es: %d\n", *sumatoria);
+    printf("\nLa sumatoria es: %d\n", sumatoria);
+}
+
+void MinVector(int vec[], int m){
+    int menor = vec[0]; 
+    for(int i=1; i<m; i++){
+        if (vec[i]<menor) menor=vec[i];         
+    }
+    printf("El valor menor es: %d\n", menor);    
+}
+
+void PromVector(int vec[], int m){
+    int sumaTotal = 0;
+    int prom;
+    for(int i=0; i<m; i++){
+        sumaTotal += vec[i];
+    }
+    prom = sumaTotal / m;
+    printf("El promedio es: %d", prom);    
 }
