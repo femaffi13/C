@@ -19,19 +19,46 @@ void CargaVector(int vec[], int m);
 void SumaVector(int vec[], int m);
 void MinVector(int vec[], int m);
 void PromVector(int vec[], int m);
+void SupProm(int vec[], int m);
 
 int main(){
-    int m;  
+    int m, respuesta;  
     printf("Cantidad de elementos del vector: ");
     scanf("%d", &m);
     fflush(stdin);
 
     int vector[m];
-
     CargaVector(vector, m);     //a.
-    SumaVector(vector, m);      //b.
-    MinVector(vector, m);       //c.
-    PromVector(vector, m);      //d.
+
+    while(respuesta!=0){
+        printf("\nSeleccionar el metodo: \n");
+        printf("1. Calcular y emitir la suma de sus elementos.\n");
+        printf("2. Calcular y emitir el minimo del vector.\n");
+        printf("3. Calcular y emitir el promedio de los valores del vector.\n");
+        printf("4. Emitir los valores de aquellos que superaron ese promedio.\n");
+
+        scanf("%d", &respuesta);
+        if(respuesta>0 && respuesta<12){
+            switch (respuesta){
+            case 1:
+                SumaVector(vector, m);
+                break;
+            case 2:
+                MinVector(vector, m);
+                break;
+            case 3: 
+                PromVector(vector, m); 
+                break;
+            case 4: 
+                SupProm(vector,m);
+                break;
+            default:
+                break;
+            }
+        } else{
+            break;
+        }
+    }
 
     return 0;
 }
@@ -45,6 +72,7 @@ void CargaVector(int vec[], int m){
     for(int i=0; i<m; i++){
         printf("%d ", vec[i]);
     }
+    printf("\n");
 }
 
 void SumaVector(int vec[], int m){
@@ -60,7 +88,7 @@ void MinVector(int vec[], int m){
     for(int i=1; i<m; i++){
         if (vec[i]<menor) menor=vec[i];         
     }
-    printf("El valor menor es: %d\n", menor);    
+    printf("\nEl valor menor es: %d\n", menor);    
 }
 
 void PromVector(int vec[], int m){
@@ -70,5 +98,26 @@ void PromVector(int vec[], int m){
         sumaTotal += vec[i];
     }
     prom = sumaTotal / m;
-    printf("El promedio es: %d", prom);    
+    printf("\nEl promedio es: %d\n", prom);    
+}
+
+void SupProm(int vec[], int m){
+    int sumaTotal = 0;
+    int prom;
+    for(int i=0; i<m; i++){
+        sumaTotal += vec[i];
+    }
+    prom = sumaTotal / m;
+
+    printf("\nEl promedio es de: %d\n", prom);
+    printf("Valores mayores al promedio: ");
+
+    for(int i=0; i<m; i++){
+        if(vec[i] > prom){
+            printf("%d ", vec[i]);
+        }
+    }
+
+    printf("\n");
+
 }
