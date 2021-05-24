@@ -20,6 +20,7 @@ void SumaVector(int vec[], int m);
 void MinVector(int vec[], int m);
 void PromVector(int vec[], int m);
 void SupProm(int vec[], int m);
+void Multiplos(int vec[], int m);
 
 int main(){
     int m, respuesta;  
@@ -36,6 +37,7 @@ int main(){
         printf("2. Calcular y emitir el minimo del vector.\n");
         printf("3. Calcular y emitir el promedio de los valores del vector.\n");
         printf("4. Emitir los valores de aquellos que superaron ese promedio.\n");
+        printf("5. Emitir los valores del vector que son multiplos del ultimo numero ingresado en el mismo.\n");
 
         scanf("%d", &respuesta);
         if(respuesta>0 && respuesta<12){
@@ -51,6 +53,9 @@ int main(){
                 break;
             case 4: 
                 SupProm(vector,m);
+                break;
+            case 5:
+                Multiplos(vector, m);
                 break;
             default:
                 break;
@@ -119,5 +124,16 @@ void SupProm(int vec[], int m){
     }
 
     printf("\n");
+}
 
+void Multiplos(int vec[], int m){
+    int ultimo = vec[m-1];
+    printf("El ultimo en el vector es: %d\n", ultimo);
+    printf("Los multiplos del ultimo ingresado son: ");
+    for(int i=0; i<m; i++){
+        if(ultimo % vec[i] == 0 && ultimo != vec[i]){
+            printf("%d ", vec[i]);
+        }
+    }
+    printf("\n");
 }
