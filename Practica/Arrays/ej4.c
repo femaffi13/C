@@ -1,3 +1,5 @@
+//Escribe un programa que imprima los elementos de un vector de enteros en orden inverso utilizando punteros (sin utilizar subíndices [ ] ).
+
 #include <stdio.h>
 #include <stdlib.h>
 
