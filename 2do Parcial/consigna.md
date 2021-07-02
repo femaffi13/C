@@ -17,25 +17,12 @@ Apellido – array de tipo char[30]
 3. Por otra parte, se almacenan en una array bidimensional de N filas por M columnas, las ventas realizadas durante 6 meses anteriores a los cargados en el array de sucursales  
 
 Requerimientos:
-1. Construir una función que permita procesar cada punto de venta, que se identifican con un número entero positivo. Por cada uno, se ingresan una serie de clientes, que también se identifican con un número entero positivo. Y por cada cliente se ingresa:  
-Clase (G, P ó E) -caracter-  
-Importe, -número real-  
-Esta función debe emitir, durante el proceso de obtención de los resultados parciales y por cada punto de venta la facturación total por categoría con su cantidad de clientes.
-Ejemplo de la primera iteración de grupo:  
-Punto de venta 1 – Facturación:  
-G: 72566,89, 5 clientes  
-P: 81214,69, 2 clientes  
-E: 101987,50, 3 clientes  
-Ejemplo de la segunda iteración de grupo:  
-Punto de venta 2 – Facturación:  
-G: 102245,21, 3 clientes  
-P: 48432,91, 5 clientes  
-E: 20870,30, 2 clientes  
-…siguientes iteraciones….  
+1. Función que reciba el vector de sucursales y cargue en el campo ‘Total_de_ventas_del_mes’, el total del array ‘ventas_del_mes’.  
 
-2. Construir una función auxiliar que reciba -al menos- categoría e importe y devuelva a la función del punto 1, el total acumulado por cada categoría con su cantidad de clientes.
+2. Función que reciba el vector de sucursales, la matriz de ventas y cargue en el campo ‘Importe_Mayor_venta’ la mayor de las ventas obtenida de la matriz.  
 
-3. Mensaje final en main(), que emita los resultados finales:
-    - total general de clientes.
-    - qué categoría facturó más y cuál fue el importe.
-    - el total general de facturación.
+3. Función que reciba el vector de sucursales, el vector de enteros y cargue en este vector, las posiciones de los registros del vector de sucursales cuyo ‘Total_de_ventas_del_mes’ no supere al ‘Importe_Mayor_venta’. Los datos de las posiciones deben almacenarse en forma contigua. Esta función debe retornar la cantidad de sucursales detectadas que cumplan con esa directiva.  
+
+4. Función que reciba el vector de sucursales, vector de CEO’s, vector de posiciones y la cantidad retornada en la función anterior y emita el campo ‘Ciudad’ de las sucursales que hayan cumplido la directiva y el campo ‘Apellido’ del CEO que corresponde a esa ciudad.  
+
+5. Función que reciba el vector de sucursales y lo ordene por ciudad en forma descendente. No utilizar qsort. Para su resolución se debe elegir uno de los cuatro algoritmos dados en clase (función obligatoria para aprobar).
